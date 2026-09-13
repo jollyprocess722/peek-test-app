@@ -34,7 +34,9 @@ post('/api/webhooks/test', function handleWebhook(req, res, body) {
     send(res, 500, { error: 'synthetic webhook failure for wave-3a H45 verification' });
     return;
   }
-  send(res, 200, { ok: true, received: body ? body.length : 0, signature: req.headers['x-webhook-signature'] ? 'present' : 'absent' });
+  // Accept both the generic and GitHub-style signature headers.
+  const sig = req.headers['x-webhook-signature'] || req.headers['x-hub-signature'];
+  send(res, 200, { ok: true, received: body ? body.length : 0, signature: sig ? 'present' : 'absent' });
 });
 
 const server = http.createServer((req, res) => {
