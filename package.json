@@ -2,11 +2,19 @@
   "name": "peek-test-app",
   "private": true,
   "scripts": {
-    "postinstall": "bash scripts/setup-db.sh || true",
-    "start": "bash scripts/start.sh"
+    "start": "node server.js || bun server.js"
   },
   "dependencies": {
     "express": "^4.21.0",
-    "pg": "^8.12.0"
-  }
+    "pg": "^8.12.0",
+    "@embedded-postgres/linux-x64": "^17.4.0-beta.15"
+  },
+  "trustedDependencies": [
+    "embedded-postgres",
+    "@embedded-postgres/linux-x64",
+    "@embedded-postgres/linux-arm64",
+    "@embedded-postgres/darwin-x64",
+    "@embedded-postgres/darwin-arm64",
+    "@embedded-postgres/windows-x64"
+  ]
 }
