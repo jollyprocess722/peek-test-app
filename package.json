@@ -1,1 +1,16 @@
-{"name":"peek-wave3a-test","private":true,"version":"0.0.1","scripts":{"start":"node server.js"}}
+{
+  "name": "peek-wave3a-test",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "peek": {
+    "seeds": {
+      "demo": {
+        "description": "Writes demo records the app serves at /api/seed-data (A15 named-seed demo)",
+        "script": "node seed/demo.js"
+      }
+    }
+  }
+}
