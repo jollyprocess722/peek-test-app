@@ -1,0 +1,14 @@
+# .obvious/config.yml — repo policy for obvious workers.
+# Auto-generated during onboarding (2026-09-17); values auto-detected from GitHub.
+
+repo: peek-test-app
+
+# Default branch (auto-detected from GitHub repo settings).
+defaultBranch: main
+
+# Preferred merge method for pull requests.
+# GitHub enables merge-commit, squash, and rebase on this repo; squash is the default choice.
+mergeMethod: squash
+
+# A human must approve and merge PRs targeting the default branch.
+requireHumanMerge: true
