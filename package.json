@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/leaky-build.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {
